@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Images and Links</title>
+    </head>
+
+    <body>
+        <div class="row">
+            <div class="column">
+                <a href="https://www.facebook.com/" target="_blank"><img class="pic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/480px-Facebook_icon_2013.svg.png" width="150"></a>
+            </div>
+            <div class="column">
+                <a href="https://www.instagram.com/" target="_blank"><img class="pic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/480px-Instagram_icon.png" width="150"></a>
+            </div>
+            <div class="column">
+                <a href="https://twitter.com/?lang=en" target="_blank"><img class="pic" src="img/twitter.png" width="150"></a>
+            </div>
+            <div class="column">
+                <a href="https://www.youtube.com/" target="_blank"><img class="pic" src="img/youtube.png" width="150"></a>
+            </div>
+        </div>
+        
+        <table>
+                <thead>
+                    <tr>
+                        <th>Social Media </th>
+                        <th>Number of monthly active users</th>
+                        <th>Date founded</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://www.facebook.com/" target="_blank">Facebook</a></td>
+                        <td>2.701 billion</td>
+                        <td>February 14, 2004</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.instagram.com/" target="_blank">Instagram</a></td>
+                        <td>1.16 billion</td>
+                        <td>October 6, 2010</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://twitter.com/?lang=en" target="_blank">Twitter</a></td>
+                        <td>353 million</td>
+                        <td>March 21, 2006</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.youtube.com/" target="_blank">Youtube</a></td>
+                        <td>2 billion</td>
+                        <td>February 14, 2005</td>
+                    </tr>
+                </tbody>
+            </table>    
+    </body>
+
+<!--Styling-->
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        html{
+            height:100%;
+            border:lightskyblue solid 15px;
+        }
+
+        table{
+            font-family: arial, sans-serif;
+            margin:0 auto;
+            border-collapse: collapse;
+            width:70%;
+            margin-top:3%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 7px;
+        }
+
+        tr:nth-child(even) {
+             background-color: #dddddd;
+        }
+
+        .row{
+            text-align:center;
+            margin:2% auto;
+        }
+
+        .column{
+            padding:5%;
+            display:inline-block;
+            margin:auto;
+        }
+
+        .pic {
+            max-width: 10vw;
+            height:auto;
+        }
+
+        @media only screen and (max-width: 768px) {
+            table{
+                margin-top:10%;
+            }
+
+            .row{
+                margin-top:6%;
+            }
+        }
+    </style>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Justin's Portfolio</title>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<section id="banner">
+			<div class="navcontainer">
+				<nav id="navbar">
+					<a href="home.html">Home</a>
+					<a href="graphic.html">Graphic</a>
+					<a href="animation.html">Animation</a>
+					<span id="lastlink"><a href="website.html">Website</a></span>
+				</nav>
+				<h1>Justin's Portfolio</h1>
+			</div>
+		</section>
+
+		<section class="content">
+			<h1>Graphic</h1>
+			<hr class="lb">
+				<div id="gracontent">
+					<div class="container">
+						<table>
+							<tbody>
+								<tr>
+									<td><img id="img1" src="img/ColourCycle.png"></td>
+									<td class="text"><h2>Colour Cycle</h2><p>This Colour Cycle image was created using Adobe Animate. The purpose of this image is to help us get a better understanding of some basic terms and issues of color and get familiar with referencing colours through hexadecimal numbers. This is a neat assignment and it certainly helps me to better understand colour.</p></td>	
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="container2">
+						<table>
+							<tbody>
+								<tr>
+									<div class="showcase2">
+										<td><img id="img2" src="img/FillsAssign.png"></td>
+									</div>
+									<div class="text2">
+										<td class="text"><h2>Fills Assignment</h2><p>This Fills Assignment image was created using Photoshop. This assignment focuses on helping us to be more familiar with some of the different tools and techniques in the graphic program. Needless to say, this assignment has helped me to better familiarize myself with Photoshop.</p></td>	
+									</div>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="container3">
+						<table>
+							<tbody>
+								<tr>
+									<td><img class="gallery-img" src="img/Magazine1.png">
+									<div id="sliderbtn">
+										<button class="btn" onclick="prev()">&#8249</button>
+										<button class="btn" onclick="next()">&#8250</button>
+									</div></td>
+									<td class="text"><h2>Weekly Magazine</h2><p>Working on the Weekly Magazine assignment was a refreshing experience. In this assignment I created two cover and two article pages of a magazine using MS Word and Photoshop. This assignment has helped me to better pick up the art of graphic designing.</p></td>	
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+		</section>
+	</body>
+
+	<script>
+		var gallery_img = document.querySelector('.gallery-img');
+		var images = ['Magazine1.png', 'Magazine2.png', 'Magazine3.png', 'Magazine4.png'];
+		var i = 0;
+
+		function prev(){
+			if(i <= 0) i = images.length;	
+			i--;
+			return setImg();			 
+		}
+
+		function next(){
+			if(i >= images.length-1) i = -1;
+			i++;
+			return setImg();			 
+		}
+
+		function setImg(){
+			return gallery_img.setAttribute('src', "img/"+images[i]);
+			
+		}
+	</script>
+</html>
+

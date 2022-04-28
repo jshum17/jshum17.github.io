@@ -1,0 +1,42 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color:black;
+   margin: 0 auto;
+   height:100vh;
+   position: relative;
+   text-align: center;
+   font-family: 'Kumbh Sans', sans-serif;
+}
+
+.container{
+   position: absolute;
+   top:50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+   width: 85%;
+}
+
+#clockDisplay {
+   color: aqua;
+   font-size: 100px;
+}
+
+#dayMonth {
+   color: aqua;
+   font-size: 40px;
+}
+
+@media only screen and (max-width:650px){
+   #clockDisplay {
+      font-size: 70px;
+   }
+   
+   #dayMonth {
+      font-size: 25px;
+   }
+}
