@@ -10,6 +10,22 @@ $(document).ready(function(){
       }
    });
 
+   //Gallery Lightbox
+
+   $('.gallery-img').click(function(){
+      $('.lightbox').addClass("active");
+      const img = $(this).clone();
+      $('.lightbox').append(img);
+      $("html").addClass("noscroll");
+   });
+
+   $('.lightbox').click(function(event){
+      if(event.target !== event.currentTarget) return
+      $('.lightbox').removeClass("active");
+      $('.lightbox').empty();
+      $("html").removeClass("noscroll");
+   });
+
    //Home down btn smooth scrolling
    $("a[href^=\\#welcome]").on('click', function(event) {
     
@@ -46,39 +62,6 @@ $(document).ready(function(){
       typeSpeed:120,
       backSpeed:80,
       loop:true
-   });
-
-   //About Pop Up
-
-   $(window).scroll( function(){
-    
-      /* Check the location of each desired element */
-      $('about-desc').each( function(i){
-          
-          var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-          var bottom_of_window = $(window).scrollTop() + $(window).height();
-          
-          /* If the object is completely visible in the window, fade it it */
-          if( bottom_of_window > bottom_of_object ){
-            $(this).animate({'opacity':'1'},600).addClass('animate__animated animate__fadeInUp');    
-         } 
-      }); 
-   });
-
-   //Gallery Lightbox
-   
-   $('.gallery-img').click(function(){
-      $('.lightbox').addClass("active");
-      const img = $(this).clone();
-      $('.lightbox').append(img);
-      $("html").addClass("noscroll");
-   });
-
-   $('.lightbox').click(function(event){
-      if(event.target !== event.currentTarget) return
-      $('.lightbox').removeClass("active");
-      $('.lightbox').empty();
-      $("html").removeClass("noscroll");
    });
 
 });
