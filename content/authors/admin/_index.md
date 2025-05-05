@@ -46,7 +46,7 @@ education:
     date_start: 2022-09-01
     date_end: 
     summary: |2-      
-      Coursework:
+      Relevant Coursework:
       - DSCI 100: Introduction to Data Science
       - STAT 201: Statistical Inference for Data Science
       - STAT 301: Statistical Modelling for Data Science
